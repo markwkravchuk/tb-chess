@@ -1,2 +1,74 @@
-Outline:
+Chess:
+
+1. Setup the Game
+  - Get the players for the game
+  - Create a board for each player (I want to show respective side)
+  - Figure out who goes first
+    - Random / players choose
+
+
+2. Play the Game
+  - Display the current board 
+  - If the game isn't over
+    - Ask what the player wants to do
+      1.) Make a move
+        - Player chooses which square to move from
+        - Player chooses which square to move to
+        - If the move is valid
+          - Execute the move
+        - Update pieces
+          - Check whether this put enemy king into check
+          - Change location of piece that moved to new location
+        - Switch player
+      2.) Resign
+        - Break loop since game is, in fact, now over
+
+
+3. Announce Results
+
+
+Game is over conditions:
+  - Checkmate
+  - Draw
+    - Insufficient Material
+    - Stalemate
+    (Currently don't care about repetition or 50 move rule)
+
+
+Potential Classes:
+- Game
+  - Play
+- Player
+  - Will have pieces
+  - Know whether they have castled
+    - If not, they can
+    - 
+- Piece
+  - SUBCLASSES: King, Pawn, Rook, Knight, Bishop, Queen
+  - Know location
+  - Know whether it has moved before
+- Board
+  - Print
+
+
+Special Moves:
+- En passant
+  - If I'm white and my pawn is on 5th rank (Black and pawn is on 4th rank) and other pawn hasn't moved before and goes up two squares
+    - My pawn should move behind enemy's pawn and take the enemy's pawn
+
+- Castling
+  - If
+    - My king and intended rook have not moved
+    - My king has not been put into Checkmate
+    - Enemy piece is not "disrupting" the maneuver
+  - Then I can castle
+  - Else
+    - Invalid move
+
+- Promotion
+  - If my pawn reaches the total opposite side
+    - I can change that pawn to any piece
+
+
+
 
