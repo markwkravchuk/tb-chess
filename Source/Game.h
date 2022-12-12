@@ -7,6 +7,9 @@ namespace Chess {
             Game();
             void play();
         private:
+            bool is_game_over() const;
+            void curr_player_takes_turn();
+            void declare_results() const;
     };
 }
 #endif
