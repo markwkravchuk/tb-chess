@@ -8,7 +8,7 @@ void Chess::Game::play() {
 }
 
 bool Chess::Game::is_game_over() const {
-    
+    return is_checkmate() or is_draw();
 }
 
 void Chess::Game::curr_player_takes_turn() {
@@ -16,5 +16,5 @@ void Chess::Game::curr_player_takes_turn() {
 }
 
 void Chess::Game::declare_results() const {
-
+    
 }
