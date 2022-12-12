@@ -10,6 +10,8 @@ namespace Chess {
             bool is_game_over() const;
             void curr_player_takes_turn();
             void declare_results() const;
+            bool is_checkmate() const;
+            bool is_draw() const;
     };
 }
 #endif

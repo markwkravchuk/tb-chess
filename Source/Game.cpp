@@ -18,3 +18,11 @@ void Chess::Game::curr_player_takes_turn() {
 void Chess::Game::declare_results() const {
     
 }
+
+bool Chess::Game::is_checkmate() const {
+
+}
+
+bool Chess::Game::is_draw() const {
+    
+}
