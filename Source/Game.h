@@ -9,6 +9,7 @@ namespace Chess {
         public:
             Game();
             void play();
+            int get_curr_player();
         private:
             bool is_game_over() const;
             void curr_player_takes_turn();

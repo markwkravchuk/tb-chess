@@ -17,14 +17,14 @@ void Chess::Game::curr_player_takes_turn() {
     // each piece in the game
     Move move;
     do {
-        move = curr_player.get_move();
+        move = get_curr_player().get_move();
     } while (move.is_invalid());
     move.execute();
     update_piece_information(move);
 }
 
-void Chess::Game::switch_player(int curr_player) {
-    curr_player = (curr_player + 1) % active_players.size();
+void Chess::Game::switch_player() {
+    curr_player = (get_curr_player() + 1) % active_players.size();
 }
 
 void Chess::Game::declare_results() const {
@@ -63,4 +63,8 @@ void Chess::Game::update_piece_information(const Move& move) {
             piece.set_possible_squares();
         }
     }
+}
+
+int Chess::Game::get_curr_player() {
+    return curr_player;
 }
