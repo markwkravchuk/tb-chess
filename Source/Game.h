@@ -1,6 +1,9 @@
 #ifndef CHESS_GAME_H
 #define CHESS_GAME_H
 
+#include <vector>
+#include "Player.h"
+
 namespace Chess {
     class Game {
         public:
@@ -14,6 +17,11 @@ namespace Chess {
             bool is_draw() const;
             bool is_stalemate() const;
             bool insufficient_material() const;
+            void switch_player(int curr_player);
+
+            Player curr_player;
+            std::vector<Player> active_players;
+            std::vector<Player> inactive_players;
     };
 }
 #endif

@@ -3,6 +3,7 @@
 void Chess::Game::play() {
     while (not is_game_over()) {
         curr_player_takes_turn();
+        switch_player();
     }
     declare_results();
 }
@@ -12,11 +13,17 @@ bool Chess::Game::is_game_over() const {
 }
 
 void Chess::Game::curr_player_takes_turn() {
+    Move move = curr_player.get_move();
+    move.execute();
+    update_piece_information();
+}
 
+void Chess::Game::switch_player(int curr_player) {
+    curr_player = (curr_player + 1) % active_players.size();
 }
 
 void Chess::Game::declare_results() const {
-    
+
 }
 
 bool Chess::Game::is_checkmate() const {
