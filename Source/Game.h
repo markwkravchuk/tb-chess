@@ -18,8 +18,9 @@ namespace Chess {
             bool is_stalemate() const;
             bool insufficient_material() const;
             void switch_player(int curr_player);
+            void update_piece_information(const Move& move);
 
-            Player curr_player;
+            int curr_player;
             std::vector<Player> active_players;
             std::vector<Player> inactive_players;
     };

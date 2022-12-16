@@ -19,6 +19,7 @@ Chess:
         - Update pieces
           - Check whether this put enemy king into check
           - Change location of piece that moved to new location
+          - Look at each piece and see if their possible squares have changed. If so, update them
         - Switch player
       2.) Resign
         - Break loop since game is, in fact, now over
@@ -49,6 +50,10 @@ Potential Classes:
   - Know whether it has moved before
 - Board
   - Print
+- Move
+  - Know who was moved
+  - Know what was taken (if anything)
+  - 
 
 
 Special Moves:
