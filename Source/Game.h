@@ -12,6 +12,8 @@ namespace Chess {
             void declare_results() const;
             bool is_checkmate() const;
             bool is_draw() const;
+            bool is_stalemate() const;
+            bool insufficient_material() const;
     };
 }
 #endif
